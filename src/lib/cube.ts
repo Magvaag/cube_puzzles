@@ -101,7 +101,7 @@ export class CubeState {
 
     const rotateVec = (v: Vec3, axis: 'x'|'y'|'z', quarterTurns: number) => {
       const t = ((quarterTurns % 4) + 4) % 4;
-      let out = { x: v.x, y: v.y, z: v.z };
+      const out = { x: v.x, y: v.y, z: v.z };
       for (let i = 0; i < t; i++) {
         if (axis === 'x') {
           const y = out.y, z = out.z; // +90 around +X: (y,z) -> (-z, y)
